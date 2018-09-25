@@ -98,7 +98,7 @@ import { strings, getLanguage } from './i18n';
                                           .then(
                                                 (res)=>{
                                                     this.loadProgressbar();
-
+                                                    alert(JSON.stringify(res.data) );
                                                     if(res.data.success){
                                                         var json = res.data;
                                                         this.props.navigation.navigate('DashBoard', {object:  json } ) ;

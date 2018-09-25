@@ -16,6 +16,5 @@ export default styles = StyleSheet.create({
         padding: 15,
         borderWidth: .5,
         borderColor: 'powderblue',
-
     }
 });

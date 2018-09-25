@@ -48,7 +48,7 @@
 
         <TouchableOpacity  style={[{ backgroundColor: data }, styles.item]} key={i}
         onPress={()=> this.props.navigation.navigate('TabsHome', null )}>
-            <Text style={[{ textAlign:'center', textAlignVertical:'center', fontSize:20 }, styles.item]} key={i} > {data} </Text>
+            <Text style={[{ textAlign:'center', textAlignVertical:'center', fontSize:20 }, styles.item]} > {data} </Text>
         </TouchableOpacity>
 
      );
@@ -63,7 +63,6 @@
            renderItem={this._renderItem}
            renderPlaceholder={this._renderPlaceholder}
            data={['blue', 'orange', 'red', 'green', 'blue', 'yellow', 'skyblue', 'grey']}
-           data1={['blue1', 'orange1', 'red1', 'green1', 'blue1', 'yellow1', 'skyblue1', 'grey1']}
            itemsPerRow={2}
          />
        );

@@ -3,6 +3,7 @@
         TouchableHighlight, Image, DrawerActions,
  } from 'react-native';
  import { strings, setLanguage } from './i18n';
+ import GlobalStyle from '../styles/GlobalStyles.js';
 // import I18n from 'react-native-i18n';
 //import {DrawerExample} from './Screens/DrawerNavigator';
 
@@ -13,13 +14,13 @@
  });
 
 
-const MenuImage = ({navigation}) => {
-    if(!navigation.state.isDrawerOpen){
-        return <Image source={require('../images/menu-button.png')}/>
-    }else{
-        return <Image source={require('../images/left-arrow.png')}/>
-    }
-}
+//const MenuImage = ({navigation}) => {
+//    if(!navigation.state.isDrawerOpen){
+//        return <Image source={require('../images/menu-button.png')}/>
+//    }else{
+//        return <Image source={require('../images/left-arrow.png')}/>
+//    }
+//}
 
 
  export default class LanguageSelectionScreens extends Component {
@@ -55,78 +56,78 @@ const MenuImage = ({navigation}) => {
 
    render() {
      return (
-       <View style={styles.container}>
-           <TouchableHighlight style={styles.inner_flex} onPress={() => this._onPressButton("en")} underlayColor="white">
-                    <Text style={[styles.inner_container, styles.customFont, {backgroundColor: 'rgb(0, 160, 255)'}]} >{strings('languages.english')}</Text>
+       <View style={GlobalStyle.container}>
+           <TouchableHighlight style={{flex:1}} onPress={() => this._onPressButton("en")} underlayColor="white">
+                    <Text style={[GlobalStyle.inner_container, GlobalStyle.customFont, {backgroundColor: 'rgb(0, 160, 255)'}]} >{strings('languages.english')}</Text>
            </TouchableHighlight>
 
-            <TouchableHighlight style={styles.inner_flex} onPress={() => this._onPressButton("ch")} underlayColor="white">
-                               <Text style={[styles.inner_container, {backgroundColor: 'orange'}]}>{strings('languages.chinese')}</Text>
+            <TouchableHighlight style={GlobalStyle.inner_flex} onPress={() => this._onPressButton("ch")} underlayColor="white">
+                               <Text style={[GlobalStyle.inner_container, {backgroundColor: 'orange'}]}>{strings('languages.chinese')}</Text>
             </TouchableHighlight>
 
-            <TouchableHighlight style={styles.inner_flex} onPress={() => this._onPressButton("hi")} underlayColor="white">
-                    <Text style={[styles.inner_container, {backgroundColor: '#99FF99'}]}>{strings('languages.hindi')}</Text>
+            <TouchableHighlight style={GlobalStyle.inner_flex} onPress={() => this._onPressButton("hi")} underlayColor="white">
+                    <Text style={[GlobalStyle.inner_container, {backgroundColor: '#99FF99'}]}>{strings('languages.hindi')}</Text>
            </TouchableHighlight>
 
-            <TouchableHighlight style={styles.inner_flex} onPress={() => this._onPressButton("ne")} underlayColor="white">
-                    <Text style={[styles.inner_container, {backgroundColor: '#FFD5B8'}]}>{strings('languages.nepali')}</Text>
+            <TouchableHighlight style={GlobalStyle.inner_flex} onPress={() => this._onPressButton("ne")} underlayColor="white">
+                    <Text style={[GlobalStyle.inner_container, {backgroundColor: '#FFD5B8'}]}>{strings('languages.nepali')}</Text>
            </TouchableHighlight>
        </View>
      );
    }
  }
 
- const styles = StyleSheet.create({
-
-   container: {
-     flex: 1,
-     backgroundColor: '#F5FCFF',
-     justifyContent: 'center'
-   },
-
-    inner_container: {
-        flex: 1,
-        fontSize: 40,
-        textAlign: 'center',
-        textAlignVertical: 'center',
-      },
-
-      inner_flex: {
-        flex: 1,
-      },
-
-
-
-   welcome: {
-     flex : 1,
-     fontSize: 20,
-     textAlign: 'center',
-     justifyContent: 'center',
-     backgroundColor: 'skyblue',
-     alignItems: 'center',
-   },
-
-    top: {
-        flex : 1,
-        fontSize: 20,
-        textAlign: 'center',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'green',
-
-      },
-
-   instructions: {
-     textAlign: 'center',
-      fontSize: 20,
-     color : 'red',
-        backgroundColor: 'red',
-
-   },
-
-   customFont: {
-     fontFamily: 'Cedarville-Cursive',
-     // or fontFamily: 'Tittilium WebBold Italic'
-    },
-
- });
+// const styles = StyleSheet.create({
+//
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#F5FCFF',
+//     justifyContent: 'center'
+//   },
+//
+//    inner_container: {
+//        flex: 1,
+//        fontSize: 40,
+//        textAlign: 'center',
+//        textAlignVertical: 'center',
+//      },
+//
+//      inner_flex: {
+//        flex: 1,
+//      },
+//
+//
+//
+//   welcome: {
+//     flex : 1,
+//     fontSize: 20,
+//     textAlign: 'center',
+//     justifyContent: 'center',
+//     backgroundColor: 'skyblue',
+//     alignItems: 'center',
+//   },
+//
+//    top: {
+//        flex : 1,
+//        fontSize: 20,
+//        textAlign: 'center',
+//        justifyContent: 'center',
+//        alignItems: 'center',
+//        backgroundColor: 'green',
+//
+//      },
+//
+//   instructions: {
+//     textAlign: 'center',
+//      fontSize: 20,
+//     color : 'red',
+//        backgroundColor: 'red',
+//
+//   },
+//
+//   customFont: {
+//     fontFamily: 'Cedarville-Cursive',
+//     // or fontFamily: 'Tittilium WebBold Italic'
+//    },
+//
+// });
