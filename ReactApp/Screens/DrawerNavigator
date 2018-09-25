@@ -1,7 +1,6 @@
 import React from 'react';
 import {Button, Text} from 'react-native';
 
-
 import Screen1 from './screen1';
 import Screen2 from './screen2';
 import {DrawerNavigator} from 'react-navigation';

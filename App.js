@@ -130,5 +130,6 @@ const styles = StyleSheet.create({
       img_style:{
         margin: 10,
         tintColor:'black',
+
       }
 });

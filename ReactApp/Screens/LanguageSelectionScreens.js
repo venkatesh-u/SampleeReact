@@ -9,9 +9,7 @@
 
  const instructions = Platform.select({
    ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-   android:
-     'Double tap R on your keyboard to reload,\n' +
-     'Shake or press menu button for dev menu',
+   android:'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
  });
 
 
@@ -26,12 +24,10 @@ const MenuImage = ({navigation}) => {
 
  export default class LanguageSelectionScreens extends Component {
 
-
     constructor(props){
         super(props)
         this._onPressButton = this._onPressButton.bind(this);
     }
-
 
     _onPressButton(lang){
          setLanguage(lang);
@@ -43,7 +39,6 @@ const MenuImage = ({navigation}) => {
 //    }
 
 //   static navigationOptions = ({ navigation }) => {
-//
 //        title: 'ReactNavigation',  // Title to appear in status bar
 //        headerLeft:
 //            <TouchableOpacity  onPress={() => {navigation.dispatch(DrawerActions.toggleDrawer())} }>
@@ -56,14 +51,13 @@ const MenuImage = ({navigation}) => {
 //        headerTitleStyle: {
 //          fontWeight: 'bold',
 //        },
-//
 //   }
 
    render() {
      return (
        <View style={styles.container}>
- <TouchableHighlight style={styles.inner_flex} onPress={() => this._onPressButton("en")} underlayColor="white">
-                    <Text style={[styles.inner_container, {backgroundColor: 'rgb(0, 160, 255)'}]} >{strings('languages.english')}</Text>
+           <TouchableHighlight style={styles.inner_flex} onPress={() => this._onPressButton("en")} underlayColor="white">
+                    <Text style={[styles.inner_container, styles.customFont, {backgroundColor: 'rgb(0, 160, 255)'}]} >{strings('languages.english')}</Text>
            </TouchableHighlight>
 
             <TouchableHighlight style={styles.inner_flex} onPress={() => this._onPressButton("ch")} underlayColor="white">
@@ -129,4 +123,10 @@ const MenuImage = ({navigation}) => {
         backgroundColor: 'red',
 
    },
+
+   customFont: {
+     fontFamily: 'Cedarville-Cursive',
+     // or fontFamily: 'Tittilium WebBold Italic'
+    },
+
  });
